@@ -8,10 +8,12 @@ import HowItWorksSection from "./sections/HowItWorksSection";
 import PricingSection from "./sections/PricingSection";
 import FAQSection from "./sections/FAQSection";
 import FinalCTASection from "./sections/FinalCTASection";
+import TopNav from "./TopNav";
 
 export default function LandingPage() {
   return (
     <main>
+      <TopNav />
       <HeroSection content={landingContent} />
       <ProblemSolutionSection content={landingContent.problemSolution} />
       <BenefitsSection items={landingContent.benefits} />
