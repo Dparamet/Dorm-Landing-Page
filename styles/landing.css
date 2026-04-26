@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --bg: #fff7ee;
-  --surface: #fffdf9;
+  --bg: #fff8f2;
+  --surface: #fffdfb;
   --card: #ffffff;
-  --text: #0d1b2a;
-  --muted: #425466;
-  --primary: #ff7a00;
-  --primary-dark: #d96200;
-  --secondary: #0a4f7f;
-  --secondary-dark: #08324f;
-  --border: #ffd9b5;
+  --text: #1f2937;
+  --muted: #5b6472;
+  --primary: #f97316;
+  --primary-dark: #ea580c;
+  --secondary: #7c3f15;
+  --secondary-dark: #5c2f10;
+  --border: #ffd7b3;
   --shadow: 0 14px 40px rgba(13, 27, 42, 0.1);
   --radius-lg: 22px;
   --radius-md: 14px;
@@ -30,9 +30,9 @@ body {
 body {
   font-family: "Kanit", "Segoe UI", Tahoma, sans-serif;
   background:
-    radial-gradient(circle at 0% 0%, #ffd8b3 0, transparent 32%),
-    radial-gradient(circle at 100% 100%, #b7ddff 0, transparent 28%),
-    linear-gradient(180deg, #fff7ee 0%, #fffaf4 55%, #fff6ec 100%),
+    radial-gradient(circle at 0% 0%, rgba(249, 115, 22, 0.18) 0, transparent 30%),
+    radial-gradient(circle at 100% 100%, rgba(255, 205, 160, 0.34) 0, transparent 26%),
+    linear-gradient(180deg, #fff8f2 0%, #fffdf8 55%, #fff5eb 100%),
     var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -57,7 +57,7 @@ main::before {
   height: 320px;
   top: 120px;
   right: -110px;
-  background: radial-gradient(circle, rgba(10, 79, 127, 0.25) 0%, rgba(10, 79, 127, 0) 70%);
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, rgba(249, 115, 22, 0) 70%);
 }
 
 main::after {
@@ -65,7 +65,7 @@ main::after {
   height: 260px;
   bottom: 110px;
   left: -90px;
-  background: radial-gradient(circle, rgba(255, 122, 0, 0.2) 0%, rgba(255, 122, 0, 0) 72%);
+  background: radial-gradient(circle, rgba(124, 63, 21, 0.14) 0%, rgba(124, 63, 21, 0) 72%);
 }
 
 .container {
@@ -94,8 +94,8 @@ main::after {
   margin-bottom: 14px;
   padding: 7px 14px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #ffe2c4, #fff0de);
-  color: #8f4300;
+  background: linear-gradient(90deg, #ffe2c4, #fff4e7);
+  color: #9a3412;
   font-weight: 500;
   font-size: 0.95rem;
 }
@@ -159,7 +159,7 @@ h3 {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), #ff9800);
+  background: linear-gradient(135deg, var(--primary), #fb923c);
   color: #fff;
   box-shadow: 0 10px 20px rgba(255, 122, 0, 0.28);
 }
@@ -169,13 +169,13 @@ h3 {
 }
 
 .btn-ghost {
-  border: 1.5px solid #a9bfd5;
-  color: #1d2c3a;
+  border: 1.5px solid #e0c1a0;
+  color: #5c3b22;
   background: #ffffffee;
 }
 
 .btn-ghost:hover {
-  border-color: var(--secondary);
+  border-color: var(--primary);
 }
 
 .stats-row {
@@ -197,7 +197,7 @@ h3 {
 .stats-row strong {
   display: block;
   font-size: 1.4rem;
-  color: var(--secondary);
+  color: var(--primary-dark);
 }
 
 .stats-row span {
@@ -206,7 +206,7 @@ h3 {
 }
 
 .hero-card {
-  background: linear-gradient(160deg, var(--secondary-dark), var(--secondary));
+  background: linear-gradient(160deg, var(--secondary-dark), #8a4a1f);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   color: #eef7ff;
@@ -245,7 +245,7 @@ h3 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .mock-content {
@@ -291,7 +291,7 @@ h3 {
 .panel {
   background: linear-gradient(180deg, var(--card), #fffefb);
   border-radius: var(--radius-lg);
-  border: 1px solid #eef2f6;
+  border: 1px solid #f4e1d0;
   box-shadow: var(--shadow);
   padding: 24px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -303,8 +303,8 @@ h3 {
 }
 
 .panel-accent {
-  border-color: var(--border);
-  background: linear-gradient(180deg, #fff, #fff7ef);
+  border-color: #f7d9bd;
+  background: linear-gradient(180deg, #fff, #fff5ea);
 }
 
 .benefit-list,
@@ -320,7 +320,7 @@ h3 {
 .feature-list li {
   position: relative;
   background: #ffffffd9;
-  border: 1px solid #e8edf2;
+  border: 1px solid #f1ddd0;
   border-radius: 12px;
   padding: 14px 14px 14px 42px;
   transition: transform 0.2s ease;
@@ -343,7 +343,7 @@ h3 {
   display: grid;
   place-items: center;
   color: #fff;
-  background: var(--secondary);
+  background: var(--primary);
   font-size: 0.82rem;
 }
 
@@ -355,7 +355,7 @@ h3 {
 
 .quote {
   background: linear-gradient(180deg, #ffffff, #fffef9);
-  border: 1px solid #eef2f6;
+  border: 1px solid #f1ddd0;
   border-radius: var(--radius-md);
   padding: 18px;
   box-shadow: var(--shadow);
@@ -366,7 +366,7 @@ h3 {
   content: "\201C";
   font-size: 2.5rem;
   line-height: 1;
-  color: rgba(10, 79, 127, 0.2);
+  color: rgba(249, 115, 22, 0.18);
   position: absolute;
   top: 8px;
   right: 14px;
@@ -389,7 +389,7 @@ h3 {
 
 .steps article {
   background: linear-gradient(180deg, #ffffff, #fffef9);
-  border: 1px solid #edf2f7;
+  border: 1px solid #f1ddd0;
   border-radius: var(--radius-md);
   padding: 18px;
   box-shadow: 0 10px 18px rgba(13, 27, 42, 0.06);
@@ -400,8 +400,8 @@ h3 {
   margin-bottom: 10px;
   padding: 4px 10px;
   border-radius: 999px;
-  background: #eaf4ff;
-  color: var(--secondary);
+  background: #fff0e2;
+  color: #9a3412;
   font-weight: 600;
 }
 
@@ -414,7 +414,7 @@ h3 {
   margin: 20px auto 0;
   background: linear-gradient(180deg, #ffffff, #fff5e7);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
+  border: 1px solid #f3d2b3;
   box-shadow: var(--shadow);
   padding: 28px;
   position: relative;
@@ -426,7 +426,7 @@ h3 {
   position: absolute;
   top: 14px;
   right: -34px;
-  background: var(--secondary);
+  background: var(--primary-dark);
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
@@ -460,14 +460,14 @@ h3 {
 
 details {
   background: #fff;
-  border: 1px solid #e9edf3;
+  border: 1px solid #f0dfd1;
   border-radius: 12px;
   padding: 12px 14px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 details[open] {
-  border-color: #b7cbe0;
+  border-color: #eabf99;
   box-shadow: 0 8px 16px rgba(13, 27, 42, 0.08);
 }
 
@@ -509,7 +509,7 @@ details p {
 
 .top-nav {
   background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(10, 79, 127, 0.15);
+  border: 1px solid rgba(249, 115, 22, 0.14);
   border-radius: 999px;
   box-shadow: 0 10px 24px rgba(13, 27, 42, 0.09);
   backdrop-filter: blur(8px);
@@ -522,7 +522,7 @@ details p {
 
 .brand {
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--primary-dark);
   font-weight: 700;
   letter-spacing: 0.01em;
 }
@@ -541,20 +541,20 @@ details p {
 }
 
 .top-nav nav a:hover {
-  background: #edf5fc;
+  background: #fff0e2;
 }
 
 .nav-cta {
   text-decoration: none;
   font-weight: 600;
   color: #fff;
-  background: var(--secondary);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
   border-radius: 999px;
   padding: 8px 14px;
 }
 
 .nav-cta:hover {
-  background: #0d5f98;
+  background: linear-gradient(135deg, #c2410c, #f97316);
 }
 
 @keyframes fade-up {
