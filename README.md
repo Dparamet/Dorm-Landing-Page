@@ -2,9 +2,26 @@
 
 Conversion-focused landing page template for dorm and room rental campaigns, built with Next.js and optimized for maintainability, UX clarity, and static deployment.
 
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-149eca?style=for-the-badge&logo=react)](https://react.dev/)
+[![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?style=for-the-badge&logo=github)](https://pages.github.com/)
+[![License](https://img.shields.io/badge/License-MIT-16a34a?style=for-the-badge)](#)
+
+## Quick Links
+
+- Live Demo: https://dparamet.github.io/Dorm-Landing-Page/
+- Development Branch: https://github.com/Dparamet/Dorm-Landing-Page/tree/dev
+- Production Branch: https://github.com/Dparamet/Dorm-Landing-Page/tree/main
+
 ## Preview
 
 ![Landing Page Preview](public/images/dorm/site-preview.png)
+
+## Status
+
+- Current focus: UI polish + static deployment readiness
+- Hosting target: GitHub Pages
+- CI/CD: GitHub Actions workflow enabled in `.github/workflows/deploy-pages.yml`
 
 ## Table of Contents
 
