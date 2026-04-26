@@ -14,6 +14,7 @@ Built with Next.js App Router and structured for easy content updates and fast f
 - [Image Workflow](#image-workflow)
 - [Performance and SEO](#performance-and-seo)
 - [Deployment](#deployment)
+- [GitHub Pages Setup](#github-pages-setup)
 - [Development Guidelines](#development-guidelines)
 
 ## Overview
@@ -50,14 +51,14 @@ Open `http://localhost:3000` in your browser.
 
 ```bash
 npm run build
-npm run start
 ```
+
+This project uses static export for GitHub Pages. Build output will be generated in `out/`.
 
 ## Available Scripts
 
 - `npm run dev` - Start local development server.
 - `npm run build` - Build optimized production bundle.
-- `npm run start` - Start production server.
 - `npm run lint` - Run lint checks.
 
 ## Project Structure
@@ -129,12 +130,31 @@ Recommended next improvements:
 
 ## Deployment
 
-Recommended: Vercel
+Primary target in this repo: GitHub Pages (via GitHub Actions).
 
-1. Import repository to Vercel
-2. Framework preset: Next.js
-3. Build command: `npm run build`
-4. Output: automatic by Next.js
+The deployment workflow is in:
+
+- `.github/workflows/deploy-pages.yml`
+
+It runs automatically on push to `main`, builds a static export, and publishes `out/` to Pages.
+
+## GitHub Pages Setup
+
+Complete these settings once in your repository:
+
+1. Open GitHub repository settings
+2. Go to `Settings > Pages`
+3. Under `Build and deployment`, choose `Source: GitHub Actions`
+4. Ensure your default branch is `main`
+5. Push changes to `main` to trigger deployment
+
+After first successful run, site URL will be available in Actions deployment summary.
+
+Notes:
+
+- `next.config.mjs` is already configured for GitHub Pages path handling.
+- For project pages (example: `/Dorm-Landing-Page`), base path is set automatically in GitHub Actions.
+- For user pages (`username.github.io`), base path remains root.
 
 ## Development Guidelines
 
