@@ -1,165 +1,169 @@
 # Dorm Landing Page
 
-Modern, conversion-focused landing page for dorm and room rental marketing.
-Built with Next.js App Router and structured for easy content updates and fast feature expansion.
+Conversion-focused landing page template for dorm and room rental campaigns, built with Next.js and optimized for maintainability, UX clarity, and static deployment.
+
+## Preview
+
+![Landing Page Preview](public/images/dorm/site-preview.png)
 
 ## Table of Contents
 
-- [Overview](#overview)
+- [Highlights](#highlights)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
+- [Scripts](#scripts)
 - [Project Structure](#project-structure)
-- [Content Workflow](#content-workflow)
-- [Image Workflow](#image-workflow)
-- [Performance and SEO](#performance-and-seo)
-- [Deployment](#deployment)
-- [GitHub Pages Setup](#github-pages-setup)
-- [Development Guidelines](#development-guidelines)
+- [Content Management](#content-management)
+- [Asset Management](#asset-management)
+- [SEO and Performance](#seo-and-performance)
+- [Deployment (GitHub Pages)](#deployment-github-pages)
+- [Roadmap](#roadmap)
 
-## Overview
+## Highlights
 
-This project is designed to be:
-
-- Easy to maintain: content is centralized in one data source.
-- Easy to scale: each landing section is separated into reusable components.
-- Production-ready: optimized build, responsive layout, and SEO metadata included.
+- Modular section architecture for fast iteration
+- Data-driven content model for non-technical updates
+- Responsive UI tuned for mobile-first traffic
+- Static export-ready setup for low-cost hosting
+- CI/CD workflow for automatic GitHub Pages deployment
 
 ## Tech Stack
 
-- Next.js 16 (App Router)
-- React 19
-- CSS (modular structure via global import)
+| Layer | Technology |
+| --- | --- |
+| Framework | Next.js 16 (App Router) |
+| UI Library | React 19 |
+| Styling | CSS (token-based theme in a shared stylesheet) |
+| Build Target | Static export (`out/`) |
+| Deployment | GitHub Pages + GitHub Actions |
 
 ## Getting Started
 
-### 1. Install dependencies
+### Prerequisites
+
+- Node.js 20+
+- npm 10+
+
+### Install
 
 ```bash
 npm install
 ```
 
-### 2. Run development server
+### Run Local Development
 
 ```bash
 npm run dev
 ```
 
-Open `http://localhost:3000` in your browser.
+Default local URL:
 
-### 3. Create production build
+- `http://localhost:5173`
+
+### Build Production Output
 
 ```bash
 npm run build
 ```
 
-This project uses static export for GitHub Pages. Build output will be generated in `out/`.
+Generated static site output:
 
-## Available Scripts
+- `out/`
 
-- `npm run dev` - Start local development server.
-- `npm run build` - Build optimized production bundle.
-- `npm run lint` - Run lint checks.
+## Scripts
+
+- `npm run dev`: Start local development server on port `5173`
+- `npm run dev:3000`: Start local development server on port `3000`
+- `npm run build`: Create production static export
+- `npm run lint`: Run lint checks
 
 ## Project Structure
 
 ```text
 .
 |- app/
-|  |- layout.js            # App layout + metadata
-|  |- page.js              # Landing page entry
-|  |- globals.css          # Imports shared stylesheet
+|  |- layout.js
+|  |- page.js
+|  |- globals.css
 |- components/
 |  |- landing/
-|     |- LandingPage.jsx   # Section composition
-|     |- sections/         # Individual page sections
+|     |- LandingPage.jsx
+|     |- TopNav.jsx
+|     |- sections/
 |- data/
-|  |- landing-page-content.js  # All editable landing copy/data
+|  |- landing-page-content.js
+|- styles/
+|  |- landing.css
 |- public/
 |  |- images/
-|     |- dorm/             # Dorm image assets
-|     |- README.md         # Image usage guide
-|- styles/
-|  |- landing.css          # Design tokens + page styles
+|     |- dorm/
+|     |- README.md
+|- .github/
+|  |- workflows/
+|     |- deploy-pages.yml
 ```
 
-## Content Workflow
+## Content Management
 
-To update marketing content, edit only:
+Primary content source:
 
 - `data/landing-page-content.js`
 
-You can modify:
+Update from one file:
 
-- Product name, type, target audience, and problem statement
-- Hero headline, subheadline, and CTA labels
-- Benefits, testimonials, and FAQ
-- Pricing and promotion text
-- CTA suggestions
+- Hero copy and CTA labels
+- Benefits, testimonials, and FAQ blocks
+- Pricing and promotion texts
+- Product details and audience targeting
 
-This avoids editing JSX in multiple files.
+This keeps JSX components stable while content evolves.
 
-## Image Workflow
+## Asset Management
 
-### Add new images
+Asset directory:
 
-1. Place images in `public/images/dorm/`
-2. Update corresponding image path(s) in `data/landing-page-content.js`
-3. Refresh the page
+- `public/images/dorm/`
 
-### Recommended image practices
+Recommended conventions:
 
-- Prefer `webp` format for faster loading
-- Keep hero image around 200-300KB
-- Use clear file names (example: `hero-main.webp`)
-- Always provide descriptive alt text in content data
+- Prefer `webp` for large images
+- Keep hero/preview assets compressed (typically under 300KB when possible)
+- Use descriptive names (example: `site-preview.png`, `hero-main.jpg`)
+- Keep alt text aligned with each visual intent
 
-## Performance and SEO
+## SEO and Performance
 
-Included in current setup:
+Implemented:
 
-- Responsive layout for mobile/tablet/desktop
-- Lightweight section architecture for easier optimization
-- Metadata in `app/layout.js` (title, description, keywords, Open Graph, canonical)
+- Responsive layout strategy
+- Metadata configuration in `app/layout.js`
+- Static export build for fast first load on CDN
 
-Recommended next improvements:
+Recommended next steps:
 
-- Use `next/image` for all real hero/gallery images
-- Add structured data (JSON-LD) for richer search results
-- Add Lighthouse CI in pipeline
+- Migrate major visuals to `next/image` where possible
+- Add JSON-LD structured data for rich snippets
+- Add Lighthouse checks in CI for regression tracking
 
-## Deployment
+## Deployment (GitHub Pages)
 
-Primary target in this repo: GitHub Pages (via GitHub Actions).
-
-The deployment workflow is in:
+Deployment workflow:
 
 - `.github/workflows/deploy-pages.yml`
 
-It runs automatically on push to `main`, builds a static export, and publishes `out/` to Pages.
+Flow:
 
-## GitHub Pages Setup
+1. Push to `main`
+2. GitHub Actions builds static export
+3. `out/` artifact is published to GitHub Pages
 
-Complete these settings once in your repository:
+Repository setting required once:
 
-1. Open GitHub repository settings
-2. Go to `Settings > Pages`
-3. Under `Build and deployment`, choose `Source: GitHub Actions`
-4. Ensure your default branch is `main`
-5. Push changes to `main` to trigger deployment
+1. `Settings > Pages`
+2. Source: `GitHub Actions`
 
-After first successful run, site URL will be available in Actions deployment summary.
+## Roadmap
 
-Notes:
-
-- `next.config.mjs` is already configured for GitHub Pages path handling.
-- For project pages (example: `/Dorm-Landing-Page`), base path is set automatically in GitHub Actions.
-- For user pages (`username.github.io`), base path remains root.
-
-## Development Guidelines
-
-- Keep copy/content updates inside `data/landing-page-content.js`
-- Keep styling updates inside `styles/landing.css`
-- Add new sections in `components/landing/sections/`
-- Keep components focused and small
-- Run `npm run build` before pushing to ensure production integrity
+- Add theme switcher (multiple curated palettes)
+- Add content validation schema for `landing-page-content.js`
+- Add visual regression checks for critical sections
