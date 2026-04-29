@@ -1,13 +1,12 @@
 import { landingContent } from "../../data/landing-page-content";
 import HeroSection from "./sections/HeroSection";
-import ProblemSolutionSection from "./sections/ProblemSolutionSection";
-import BenefitsSection from "./sections/BenefitsSection";
-import SocialProofSection from "./sections/SocialProofSection";
-import ProductDetailsSection from "./sections/ProductDetailsSection";
-import HowItWorksSection from "./sections/HowItWorksSection";
-import PricingSection from "./sections/PricingSection";
-import FAQSection from "./sections/FAQSection";
-import FinalCTASection from "./sections/FinalCTASection";
+import AboutSection from "./sections/AboutSection";
+import RoomPricingSection from "./sections/RoomPricingSection";
+import FacilitiesSection from "./sections/FacilitiesSection";
+import LocationSection from "./sections/LocationSection";
+import RulesSection from "./sections/RulesSection";
+import GallerySection from "./sections/GallerySection";
+import ContactSection from "./sections/ContactSection";
 import TopNav from "./TopNav";
 
 export default function LandingPage() {
@@ -15,17 +14,16 @@ export default function LandingPage() {
     <main>
       <TopNav />
       <HeroSection content={landingContent} />
-      <ProblemSolutionSection content={landingContent.problemSolution} />
-      <BenefitsSection items={landingContent.benefits} />
-      <SocialProofSection testimonials={landingContent.testimonials} />
-      <ProductDetailsSection
-        product={landingContent.product}
-        features={landingContent.features}
+      <AboutSection content={landingContent} />
+      <RoomPricingSection rooms={landingContent.rooms} />
+      <FacilitiesSection
+        facilities={landingContent.facilities}
+        utilities={landingContent.utilities}
       />
-      <HowItWorksSection items={landingContent.howItWorks} />
-      <PricingSection pricing={landingContent.pricing} />
-      <FAQSection faqs={landingContent.faqs} />
-      <FinalCTASection content={landingContent.finalCta} />
+      <LocationSection location={landingContent.location} site={landingContent.site} />
+      <RulesSection rules={landingContent.rules} />
+      <GallerySection gallery={landingContent.gallery} />
+      <ContactSection contact={landingContent.contact} />
     </main>
   );
 }
