@@ -2,13 +2,15 @@ export default function TopNav() {
   return (
     <header className="top-nav-wrap">
       <div className="container top-nav">
-        <a href="#home" className="brand">StayNearU</a>
+        <a href="#home" className="brand">B&amp;O Apartment</a>
         <nav aria-label="Main navigation">
-          <a href="#benefits">จุดเด่น</a>
-          <a href="#pricing">ราคา</a>
-          <a href="#faq">FAQ</a>
+          <a href="#about">About</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#facilities">Facilities</a>
+          <a href="#location">Location</a>
+          <a href="#gallery">Gallery</a>
         </nav>
-        <a href="#final-cta" className="nav-cta">เริ่มหาหอ</a>
+        <a href="#contact" className="nav-cta">Contact Now</a>
       </div>
     </header>
   );

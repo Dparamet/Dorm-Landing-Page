@@ -1,125 +1,98 @@
 export const landingContent = {
-  product: {
-    name: "เว็บไซต์หอ StayNearU",
-    type: "ห้องเช่า / Room",
-    targetAudience: "นักศึกษา คนทำงาน และผู้ที่ต้องการที่พักใกล้แหล่งเรียน/แหล่งงาน",
-    mainProblem: "หาหอยาก ข้อมูลกระจัดกระจาย ราคาไม่ชัดเจน"
+  site: {
+    name: "B&O Apartment Khon Kaen",
+    subtitle: "ใกล้ราชมงคลขอนแก่น",
+    phone: "081-871-2254",
+    facebook: "https://www.facebook.com/BandOApartment/?utm_source=chatgpt.com",
+    mapQuery: "B&O Apartment Khon Kaen 191 Moo 6 Sri Chan Road Soi 29 Nai Mueang Mueang Khon Kaen",
+    address: "191 Moo 6, Sri Chan Road Soi 29, Nai Mueang, Mueang Khon Kaen, Thailand"
   },
   hero: {
-    eyebrow: "เว็บไซต์หอสำหรับนักศึกษาและคนทำงาน",
-    headline: "หา หอที่ใช่ เข้าอยู่ไว ในงบที่คุณคุมได้",
-    subheadline:
-      "StayNearU ช่วยคุณเปรียบเทียบหอพักและห้องเช่าใกล้มหาวิทยาลัยหรือที่ทำงานแบบเข้าใจง่าย พร้อมรีวิวจริง แผนที่จริง และราคาจริง",
-    ctaPrimary: "ดูหอพร้อมโปรวันนี้",
-    ctaSecondary: "ดูวิธีใช้งาน 3 ขั้นตอน"
+    eyebrow: "หอราคาประหยัด ใกล้ราชมงคลขอนแก่น",
+    headline: "Affordable Living Near RMUTI Khon Kaen",
+    subheadline: "หอราคาประหยัด อยู่จริง เน้นคุ้มค่า ไม่เน้นหรู พร้อมห้องพักเริ่มต้น 2,000 บาทต่อเดือน เดินถึงมหาวิทยาลัยได้สะดวก",
+    primaryCta: "Contact Now",
+    secondaryCta: "View Rooms"
   },
-  stats: [
-    { value: "12,500+", label: "ผู้ใช้งานต่อเดือน" },
-    { value: "4.8/5", label: "คะแนนความพึงพอใจ" },
-    { value: "1,200+", label: "หอที่ผ่านการคัดกรอง" }
-  ],
-  imageSlots: {
-    hero: {
-      title: "ภาพ Hero",
-      path: "/images/dorm/hero-main.jpg",
-      alt: "ภาพอาคารหอพักหรือบรรยากาศห้องพัก",
-      tips: [
-        "แนะนำอัตราส่วน 4:3 หรือ 16:10",
-        "ขนาดไฟล์ไม่ควรเกิน 300KB",
-        "ใช้ภาพที่มีแสงธรรมชาติและสื่อถึงความปลอดภัย"
-      ]
-    }
+  about: {
+    title: "About B&O Apartment",
+    description:
+      "B&O Apartment เป็นหอพักเรียบง่าย สะอาด และคุ้มค่า เหมาะกับนักศึกษาและวัยทำงานที่อยากอยู่ใกล้ราชมงคลขอนแก่น เดินทางสะดวก และใช้ชีวิตประจำวันได้สบาย",
+    highlights: [
+      "อยู่ฝั่งตรงข้ามราชมงคลขอนแก่น",
+      "เดินถึงมหาวิทยาลัยได้",
+      "ใกล้ร้านอาหาร ร้านค้า และของใช้จำเป็น"
+    ]
   },
-  problemSolution: {
-    problemTitle: "ปัญหาที่คนหาหอเจอบ่อย",
-    problemText:
-      "เสียเวลาค้นหลายเว็บ ข้อมูลไม่ตรงกัน บางที่ราคาจริงไม่เหมือนประกาศ และต้องนัดดูห้องหลายรอบ กว่าจะเจอที่พักที่ไว้ใจได้",
-    solutionTitle: "ทางออกของ StayNearU",
-    solutionText:
-      "รวมข้อมูลหอที่ตรวจสอบแล้วในที่เดียว เปรียบเทียบง่าย เห็นราคาจริง รีวิวจริง และกดติดต่อได้ทันที ช่วยตัดสินใจเร็วขึ้นแบบมั่นใจ"
-  },
-  benefits: [
-    "ลดเวลาหาหอจากหลายวัน เหลือไม่กี่นาที ด้วยข้อมูลที่เปรียบเทียบง่าย",
-    "มั่นใจเรื่องความปลอดภัย มีการคัดกรองหอและรีวิวจากผู้พักจริง",
-    "คุมงบได้ตั้งแต่แรก เพราะมีราคาและค่าใช้จ่ายระบุชัดเจน",
-    "เดินทางสะดวก เลือกหอใกล้มหาวิทยาลัยหรือที่ทำงานตามพิกัดจริง",
-    "ทักจองและนัดดูห้องได้ทันที ไม่ต้องโทรหลายที่ให้เสียเวลา"
-  ],
-  testimonials: [
+  rooms: [
     {
-      name: "เมย์ นักศึกษาปี 2",
-      text: "ก่อนหน้านี้หาหอเองเหนื่อยมาก แต่พอใช้ StayNearU ก็เจอหอที่ชอบในวันเดียว ราคาตรงงบจริง"
+      name: "Fan Room",
+      price: "2,000 - 2,800",
+      unit: "THB / month",
+      description: "Budget-friendly room for students who want simple comfort and low monthly cost.",
+      image: "/images/dorm/room-01.webp"
     },
     {
-      name: "นนท์ พนักงานออฟฟิศ",
-      text: "ชอบที่มีรีวิวเรื่องเสียงรบกวนกับความปลอดภัย ทำให้ตัดสินใจง่ายขึ้นและไม่เสียเวลานัดดูหลายที่"
-    },
-    {
-      name: "แพร ผู้ปกครอง",
-      text: "ดูข้อมูลแทนลูกได้ครบ ทั้งระยะทางและค่าใช้จ่าย รวมถึงโปรเข้าอยู่ใหม่ คุ้มมาก"
+      name: "Air Room",
+      price: "3,000 - 4,000",
+      unit: "THB / month",
+      description: "Cool and comfortable room for people who want a more relaxing stay during hot days.",
+      image: "/images/dorm/room-02.jpg"
     }
   ],
-  features: [
-    "แผนที่ระยะเดินจริงจากหอถึงมหาวิทยาลัย/รถไฟฟ้า",
-    "ฟิลเตอร์ละเอียด: งบ, ห้องแอร์, เลี้ยงสัตว์ได้, ที่จอดรถ, อินเทอร์เน็ต",
-    "รีวิวผู้พักจริงพร้อมคะแนนแยกด้านเสียง/ความสะอาด/ความปลอดภัย",
-    "แชตในระบบ + นัดดูห้องออนไลน์",
-    "อัปเดตห้องว่างแบบเรียลไทม์"
+  facilities: [
+    { icon: "P", title: "Parking", text: "จอดมอเตอร์ไซค์ได้" },
+    { icon: "L", title: "Laundry", text: "มีเครื่องซักผ้าและตู้กดน้ำ" },
+    { icon: "F", title: "Food", text: "มีร้านอาหารในพื้นที่" },
+    { icon: "M", title: "Mini Mart", text: "มีมินิมาร์ตใกล้หอ" },
+    { icon: "S", title: "Study Room", text: "มีห้องอ่านหนังสือ" },
+    { icon: "C", title: "Security", text: "มีกล้อง CCTV และคีย์การ์ด" },
+    { icon: "W", title: "Wi-Fi", text: "Wi-Fi ฟรีสำหรับผู้พักอาศัย" },
+    { icon: "U", title: "Utilities", text: "ค่าน้ำค่าไฟแจ้งชัดเจน" }
   ],
-  howItWorks: [
+  utilities: [
+    "Water: 20 THB / unit",
+    "Electricity: 8 THB / unit",
+    "Wi-Fi: Free"
+  ],
+  rules: [
+    "ห้ามเลี้ยงสัตว์",
+    "ห้ามสูบบุหรี่",
+    "ห้ามจอดรถยนต์"
+  ],
+  gallery: [
     {
-      step: "01",
-      title: "เลือกโซนและงบ",
-      description: "ระบุย่านที่ต้องการ งบประมาณ และเงื่อนไขที่สำคัญกับคุณ"
+      src: "/images/dorm/room-03.jpg",
+      alt: "Student room interior"
     },
     {
-      step: "02",
-      title: "เปรียบเทียบหอที่ใช่",
-      description: "ดูรีวิว ราคา และระยะทางจริงแบบ side-by-side ตัดสินใจง่ายขึ้น"
+      src: "/images/dorm/room-02.jpg",
+      alt: "Modern apartment room"
     },
     {
-      step: "03",
-      title: "ทักจองและนัดดูห้อง",
-      description: "ส่งข้อความในระบบทันที และยืนยันวันเข้าพักได้ในไม่กี่คลิก"
+      src: "/images/dorm/hero-main.jpg",
+      alt: "Apartment exterior view"
+    },
+    {
+      src: "/images/dorm/site-preview.png",
+      alt: "Apartment and landing page preview"
     }
   ],
-  pricing: {
-    title: "ราคาเริ่มต้นชัดเจน",
-    plan: "แพ็กเกจผู้เช่า",
-    price: "฿0",
-    detail: "ค้นหา เปรียบเทียบ และติดต่อหอได้ฟรี",
-    promo: "โปรโมชั่น: หอที่ร่วมรายการลดค่าแรกเข้า สูงสุด 1,500 บาท*",
-    cta: "เริ่มค้นหาหอฟรีตอนนี้"
+  contact: {
+    title: "พร้อมดูห้องหรือยัง?",
+    description: "ติดต่อหอพักโดยตรงเพื่อสอบถามห้องว่าง ประเภทห้อง และรายละเอียดการเข้าอยู่",
+    phone: "081-871-2254",
+    facebookLabel: "Facebook page",
+    facebook: "https://www.facebook.com/BandOApartment/?utm_source=chatgpt.com",
+    primaryCta: "โทรเลย",
+    secondaryCta: "เปิด Facebook"
   },
-  faqs: [
-    {
-      q: "ข้อมูลหอในเว็บน่าเชื่อถือแค่ไหน?",
-      a: "ทุกหอมีการยืนยันตัวตนผู้ลงประกาศ และรีวิวแสดงเฉพาะผู้พักจริงที่ยืนยันการเข้าพักแล้ว"
-    },
-    {
-      q: "มีค่าใช้จ่ายในการใช้งานไหม?",
-      a: "ผู้เช่าสามารถค้นหา เปรียบเทียบ และติดต่อหอได้ฟรี ไม่มีค่าธรรมเนียมแอบแฝง"
-    },
-    {
-      q: "ถ้าเจอหอไม่ตรงปกทำอย่างไร?",
-      a: "สามารถรายงานผ่านระบบได้ทันที ทีมงานจะตรวจสอบและระงับประกาศที่ไม่ผ่านมาตรฐาน"
-    },
-    {
-      q: "เหมาะกับคนทำงานด้วยไหม?",
-      a: "เหมาะมาก เพราะมีฟิลเตอร์ใกล้รถไฟฟ้า/ย่านออฟฟิศ และคำนวณเวลาเดินทางให้ดูทันที"
-    }
-  ],
-  finalCta: {
-    headline: "หอดี ๆ ไม่ต้องหาให้เหนื่อยอีกต่อไป",
-    text:
-      "ลองใช้ StayNearU วันนี้ แล้วคุณจะรู้ว่าการหาที่พักที่ตรงใจในงบที่ใช่ สามารถจบได้เร็วและสบายใจกว่าเดิม",
-    primary: "เริ่มหาหอทันที",
-    secondary: "ดูรีวิวเพิ่มเติม",
-    suggestions: [
-      "ดูหอพร้อมโปรวันนี้",
-      "เริ่มหาหอทันที",
-      "จองคิวดูห้องฟรี",
-      "เปรียบเทียบหอใน 1 นาที"
+  location: {
+    title: "Location",
+    details: [
+      "Opposite RMUTI Khon Kaen",
+      "Near food and shops",
+      "Easy to reach by local transport"
     ]
   }
 };

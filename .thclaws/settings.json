@@ -1,0 +1,15 @@
+{
+  "model": "ollama/qwen2.5-coder:1.5b",
+  "permissions": null,
+  "maxTokens": null,
+  "maxIterations": null,
+  "thinkingBudget": null,
+  "searchEngine": null,
+  "allowedTools": null,
+  "disallowedTools": null,
+  "windowWidth": null,
+  "windowHeight": null,
+  "teamEnabled": false,
+  "showRawResponse": null,
+  "kms": null
+}

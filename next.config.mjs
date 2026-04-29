@@ -9,6 +9,9 @@ const basePath = isGithubActions && !isUserPageRepo ? `/${repositoryName}` : "";
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
+  images: {
+    unoptimized: true
+  },
   trailingSlash: true,
   basePath,
   assetPrefix: basePath || undefined
